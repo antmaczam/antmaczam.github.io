@@ -1,24 +1,25 @@
-"use strict";
+let openedSection = null;
+let actualButtonSelected = null;
 
-/* ===== Smooth scrolling ====== */
-/*  Note: You need to include smoothscroll.min.js (smooth scroll behavior polyfill) on the page to cover some browsers */
-/* Ref: https://github.com/iamdustan/smoothscroll */
+initSections();
 
-const pageNavLinks = document.querySelectorAll('.scrollto');
+function initSections() {
+	openedSection = document.getElementById('main-section');
+	actualButtonSelected = document.getElementsByClassName('selected')[0];	
+}
+/*
+function initSections() {
+	openedSection = document.getElementById('knowledge-section');
+	console.log(openedSection);
+	actualButtonSelected = document.getElementsByClassName('selected')[0];	
+}*/
 
-pageNavLinks.forEach((pageNavLink) => {
-	
-	pageNavLink.addEventListener('click', (e) => {
-		
-		e.preventDefault();
-		
-		var target = pageNavLink.getAttribute("href").replace('#', '');
-		
-		//console.log(target);
-		
-        document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+function changeSection(sectionToChange, buttonElement) {
+	openedSection.hidden = true;
+	actualButtonSelected.classList = [];
 
-		
-    });
-	
-});
+	openedSection = document.getElementById(sectionToChange);
+	actualButtonSelected = buttonElement;
+	openedSection.hidden = false;
+	actualButtonSelected.classList = ['selected'];
+}
