@@ -15,6 +15,7 @@ function initSections() {
 }*/
 
 function changeSection(sectionToChange, buttonElement) {
+	console.log('me ejecuto');
 	openedSection.hidden = true;
 	actualButtonSelected.classList = [];
 
