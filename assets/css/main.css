@@ -11,7 +11,7 @@ p {
 }
 
 section div {
-  animation-duration: 200ms;
+  animation-duration: 400ms;
   animation-name: slidein;
 }
 
@@ -45,8 +45,14 @@ section div {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  margin-top: 100px;
-  height: 80%;
+  height: 70%;
+  width: 80%;
+}
+
+#projects-section {
+  display: flex;
+  flex-flow: column;
+  height: 70%;
   width: 80%;
 }
 
