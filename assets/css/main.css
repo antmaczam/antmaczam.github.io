@@ -15,6 +15,12 @@ section div {
   animation-name: slidein;
 }
 
+footer {
+  width: 90%;
+  margin-inline: auto;
+  padding-block: 25px;
+}
+
 @keyframes slidein {
   from {
     margin-left: 100%;    
@@ -53,7 +59,7 @@ section div {
   display: flex;
   flex-flow: column;
   height: 70%;
-  width: 80%;
+  width: 70%;
 }
 
 .two-column-container {
@@ -121,4 +127,8 @@ section div {
 .divider {
   border-left: 2px solid #000;
   height:20px
+}
+
+.mini-logo {
+  width: 25px;
 }
